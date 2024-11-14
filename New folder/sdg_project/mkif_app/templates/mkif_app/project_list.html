@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Innovation Projects</title>
+    {% load static %}  <!-- Add this line -->
+    <link rel="stylesheet" href="{% static 'mkif_app/styles.css' %}">
+</head>
+<body>
+    <h1>Innovation Projects</h1>
+    <ul>
+        {% for project in projects %}
+            <li>{{ project.project_name }} - Participants: {{ project.participants.count }} - Progress: {{ project.progress_update }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
